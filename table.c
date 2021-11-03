@@ -1,3 +1,4 @@
+//accept a number from the user and generate the table..
 #include<stdio.h>
 int main(){
     int n;
@@ -5,7 +6,9 @@ int main(){
     scanf("%d", &n);
     for(int i=1;i<=10;i++)
     {
-        printf("%d * %d = %d",n,i,n*i);
-        return 0;
+        printf("\n %d * %d = %d",n,i,(n*i));
+        
+        
     }
+    return 0;
 }
