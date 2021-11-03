@@ -1,3 +1,4 @@
+//accept two numbers from the user and display the sum of the numbers..
 #include<stdio.h>
 int main(){
     int n1,n2,s=0;
