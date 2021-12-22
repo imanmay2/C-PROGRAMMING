@@ -1,4 +1,4 @@
-// Covert Rupees to Paise.
+// Convert Rupees to Paise.
 #include<stdio.h>
 int main()
 {
