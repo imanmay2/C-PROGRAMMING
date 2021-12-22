@@ -13,7 +13,7 @@ int main()
     }
     pro=(n1*n2);
     div=(n1/n2);
-    printf("ADDITION,SUBSTRACTION,MULTIPLICATION,DIVISION %d,%d,%d,%d",add,sub,pro,div);
+    printf("ADDITION,SUBSTRACTION,MULTIPLICATION,DIVISION %d,%d,%d,%d respectively",add,sub,pro,div);
     return 0;
 
 
