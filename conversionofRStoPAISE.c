@@ -1,3 +1,4 @@
+// Covert Rupees to Paise.
 #include<stdio.h>
 int main()
 {
