@@ -34,7 +34,7 @@ int main()
         }
         if(p==1)
         {
-            printf("IT IS A HAPPY NUMBER");
+            printf("IT IS HAPPY NUMBER");
         }
         else
         {
