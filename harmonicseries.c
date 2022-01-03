@@ -2,13 +2,14 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a=1,s1=0;
+    int n,i;
+    float s1=0,a=1;
     printf("Enter the range of the series");
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
         s1=s1+(a/i);
     }
-    printf("The sum of the harmonic series is as follows %d",s1);
+    printf("The sum of the harmonic series is as follows %f",s1);
     return 0;
 }
