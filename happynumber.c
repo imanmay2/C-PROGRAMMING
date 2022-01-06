@@ -1,4 +1,4 @@
-///check if the entered number by you is a happy number or not...e.g:   32,23,11,10;
+///check if the entered number by you is a happy number or not...e.g:   32,23,10;
 #include<stdio.h>
 int main()
 {
@@ -34,7 +34,7 @@ int main()
         }
         if(p==1)
         {
-            printf("IT IS A HAPPY NUMBER");
+            printf("IT IS HAPPY NUMBER");
         }
         else
         {
