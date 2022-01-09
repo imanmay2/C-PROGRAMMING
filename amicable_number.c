@@ -1,4 +1,4 @@
-// Amicable Number.........................
+// write a program to check whether it is an amicable number or not.
 #include<stdio.h>
 int main()
 {
