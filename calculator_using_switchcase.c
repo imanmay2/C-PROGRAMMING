@@ -1,35 +1,29 @@
-#include<stdio.h>
-int main()
-{
-    int a,b,choice;
-    float res;
-    printf("Enter the two numbers");
-    scanf("%d %d",&a,&b);
-    printf("1.Addition");
-    printf("2.Substraction");
-    printf("3.Multiplition");
-    printf("4.Division");
-    printf("Please enter your choice from the above lists");
-    scanf("%d",&choice);
-    switch(choice)
-    {
-        case 1:
-        res=a+b;
-        printf("Addition is %f",res);
-        break;
-        case 2:
-        printf("Substraction is %f",res);
-        break;
-        case 3:
-        printf("Multiplication is %f",res);
-        break;
-        case 4:
-        printf("Division is %f",res);
-        break;
-        default:
-        printf("Please enter the valid choice in between 1-4");
-        break;
+#include <stdio.h>
+int main() {
+  char op;
+  double first, second;
+  printf("Enter an operator (+, -, *, /): ");
+  scanf("%c", &op);
+  printf("Enter two operands: ");
+  scanf("%lf %lf", &first, &second);
 
-    }
-    return 0;
+  switch (op) {
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+      break;
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+      break;
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+      break;
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+      break;
+    // operator doesn't match any case constant
+    default:
+      printf("Error! operator is not correct");
+  }
+
+  return 0;
 }
