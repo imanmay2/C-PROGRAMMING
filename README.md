@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- ![Logo](image/c.jpg) -->
 <kbd>![image](image/c.jpg)</kbd>
 
@@ -10,4 +11,3 @@
 
 - [@Manmay Chakraborty](https://www.github.com/manmay2)
 
- 
