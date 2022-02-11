@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 <!-- ![Logo](image/c.jpg) -->
 <kbd>![image](image/c.jpg)</kbd>
 
     
-# PYTHON PROGRAMMING
+# C PROGRAMMING
  -  THIS IS MY **C** REPOSITORY WHERE YOU CAN FIND A LOT OF PROGRAMS.
 
 
