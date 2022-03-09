@@ -4,7 +4,7 @@ int table(int num);
 int main(){
     int num;
     printf("Enter the number to print the table of that number");
-    scanf("$d",&num);
+    scanf("%d",&num);
     table(num);
     return 0;
 }
