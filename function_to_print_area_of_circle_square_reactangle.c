@@ -3,7 +3,7 @@
 float circle(int rad);
 float square(int side);
 float rect(int l , int b);
-int main();
+int main()
 {
     int rad,side,l,b;
     printf("Enter radius of circle,side of a square,length and breadth of the rectangle");
