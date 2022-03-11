@@ -1,8 +1,14 @@
 #include<stdio.h>
 #include<math.h>
+<<<<<<< HEAD
+int circle(int rad);
+int square(int side);
+int rect(int l , int b);
+=======
 float circle(int rad);
 float square(int side);
 float rect(int l , int b);
+>>>>>>> 4aee897716d3e14889eccd5c5ed69941c548aebe
 int main()
 {
     int rad,side,l,b;
@@ -13,12 +19,12 @@ int main()
     rect(l,b);
     return 0;
 }
-float circle(int rad){
-    printf("Area of the circle is as follows %f",3.14*rad*rad);
+int circle(int rad){
+    printf("Area of the circle is as follows %f\n",3.14*rad*rad);
 }
-float square(int side){
-    printf("Area of the square is as follows %f",side*side);
+int square(int side){
+    printf("Area of the square is as follows %f\n",side*side);
 }
-float rect(int l , int b){
-    printf("Area of the rectangle is as follows %f",l*b);
+int rect(int l , int b){
+    printf("Area of the rectangle is as follows %f\n",l*b);
 }
