@@ -5,10 +5,20 @@
 # C PROGRAMMING
  -  THIS IS MY **C** REPOSITORY WHERE YOU CAN FIND A LOT OF PROGRAMS.
 
-# LICENSE
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)
-# Authors
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Authors
 
 - [@Manmay Chakraborty](https://www.github.com/manmay2)
 
+
+## 🚀 About Me
+Hi, I am Manmay Chakraborty who is currently learning C language in this very repository.
