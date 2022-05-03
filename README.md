@@ -22,3 +22,10 @@
 
 ## 🚀 About Me
 Hi, I am Manmay Chakraborty who is currently learning C language in this very repository.
+## Feedback
+
+If you have any feedback, please reach out to us at manmaychakarborty@gmail.com
+
+
+## 🛠 Skills
+Javascript, HTML, CSS,C,C++,PYTHON and JAVA
