@@ -1,4 +1,4 @@
-/// accept the radius and display the area of a circle///
+// accept the radius and display the area of a circle///
 #include<stdio.h>
 int main()
 {
@@ -9,3 +9,5 @@ int main()
     printf("........Area of the circle is as follows........%d",ar);
     return 0;
 }
+
+
