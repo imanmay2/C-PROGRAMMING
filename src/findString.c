@@ -8,16 +8,17 @@ int main(){
     char str[100];
     for(int i=0;i<n;i++){
         printf("Enter String : ");
-        scanf("%[^\n]%*c",arr[i]);
+        scanf("%s",arr[i]);
     }
     printf("Enter the String you wanna find: ");
-    scanf("%[^\n]%*c",str);
+    scanf("%s",str);
     
     
     //main algo
     int f=0;
     for(int i=0;i<n;i++){
-        if(str==arr[i]){
+        printf("%s\n",arr[i]);
+        if(!strcmp(str,arr[i])){
             f=1;
             printf("Found in row: %d",i+1);
             break;
