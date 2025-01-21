@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
+#include<limits.h>
 int main(){
-    char arr[100][10]={"hello"};
-    printf("%s",arr[0]);
+    printf("%d\n",INT_MAX);
+    printf("%d\n",INT_MIN);
+
 }
