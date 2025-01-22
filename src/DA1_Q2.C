@@ -38,11 +38,8 @@ int main(){
         } else if(choice==2){
             printf("Enter member ID to search: ");
             scanf("%s",idSearch);
-            n=sizeof(userid)/sizeof(userid[0]);
             f=0;
-            // printf("%d",n);
-            // printf("ID: %s, Name: %s, Status: %s\n",userid[0],username[0],user_status[0]);
-            for(int i=0;i<n;i++){
+            for(int i=0;i<1000;i++){
                 if(!strcmp(userid[i],"")){
                     break;
                 }
@@ -97,10 +94,7 @@ int main(){
         }
         else if(choice==5){
             printf("ALL MEMBERS: \n");
-            n=sizeof(userid)/sizeof(userid[0]);
-            // printf("%d",n);
-            // printf("ID: %s, Name: %s, Status: %s\n",userid[0],username[0],user_status[0]);
-            for(int i=0;i<n;i++){
+            for(int i=0;i<1000;i++){
                 if(!strcmp(userid[i],"")){
                     break;
                 }
