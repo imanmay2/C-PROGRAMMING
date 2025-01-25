@@ -1,16 +1,16 @@
 //Swap 2 numbers using pointers;
 
-// #include<stdio.h>
-// void swap(int *a,int *b){
-//     int temp=*a;
-//     *a=*b;
-//     *b=temp;
-// }
-// int main(){
-//     int a=3,b=5;
-//     swap(&a,&b);
-//     printf("a is : %d and b is %d",a,b);
-// }
+#include<stdio.h>
+void swap(int *a,int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main(){
+    int a=3,b=5;
+    swap(&a,&b);
+    printf("a is : %d and b is %d",a,b);
+}
 
 
 
