@@ -30,5 +30,4 @@ int main(){
     printf("Sum is : %d\n",sum);
     printf("Product is : %d\n",pro);
     printf("Average is : %d\n",avg);
-
 }
