@@ -9,18 +9,26 @@ int main(){
         char str[50];
         printf("Enter the String: ");
         scanf("%s",str);
-        strncpy(arr[i],str);
+        strcpy(arr[i],str);
     }
+
+
+    // for(int i=0;i<n;i++){
+    //     printf("%s ",arr[i]);
+    // }
+
 
     //main algo
     for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;i++){
-            if(!strcmp(arr[i],arr[j])){
-                char temp[50];
-                strncpy(temp,arr[i]);
-                strncpy(arr[i],arr[j]);
-                strncpy(arr[j],temp);
-                
+        for(int j=i+1;j<n;j++){
+            if(strcmp(arr[i],arr[j])>0){
+                char temp[100];
+                strcpy(temp,arr[i]);
+                strcpy(arr[i],arr[j]);
+                strcpy(arr[j],temp);
+                // char temp[50]=arr[i];
+                // arr[i]=arr[j];
+                // arr[j]=temp;
             }
         }
     }
