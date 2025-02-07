@@ -14,14 +14,12 @@ int main(){
             }
         }
         
-        checkIdentity(arr,n,m,&f);
+        checkIdentity((int *)arr,n,m,&f);
         if(f==1){
             printf("Identity matrix");
         } else if(f==0){
             printf("Not an identity matrix");
         }
-        
-        
     }
 }
 
