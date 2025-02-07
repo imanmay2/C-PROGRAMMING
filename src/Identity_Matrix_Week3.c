@@ -1,5 +1,5 @@
 #include<stdio.h>
-void checkIdentity(int **,int,int,int *);
+void checkIdentity(int *,int,int,int *);
 int main(){
     int n,m,f=1;
     scanf("%d %d",&n,&m);
@@ -25,10 +25,11 @@ int main(){
     }
 }
 
-void checkIdentity(int **arr,int n,int m,int *f){
+void checkIdentity(int *arr,int n,int m,int *f){
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            if((i==j && arr[i][j]==1) || (i!=j && arr[i][j]==0)){
+            int *ele=(arr+i*n+j);
+            if((i==j && *ele==1) || (i!=j && *ele==0)){
                 continue;
             } else{
                 *f=0;
