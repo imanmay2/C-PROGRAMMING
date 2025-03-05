@@ -7,7 +7,5 @@ int main(){
             gcd=i;
         }
     }
-
-
     printf("GCD of the numbers is : %d",gcd);
 }
