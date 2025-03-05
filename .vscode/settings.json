@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "DA1_Q2.C": "cpp"
+        "DA1_Q2.C": "cpp",
+        "PAT2_Q.C": "cpp"
     }
 }
