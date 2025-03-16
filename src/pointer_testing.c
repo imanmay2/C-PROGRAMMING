@@ -23,3 +23,4 @@ int main(){
 
     print2DArray((int *)arr,row,col);
 }
+
