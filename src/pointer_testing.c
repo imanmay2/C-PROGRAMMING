@@ -20,7 +20,6 @@ int main(){
             scanf("%d",&arr[i][j]);
         }
     }
-
     print2DArray((int *)arr,row,col);
 }
 
