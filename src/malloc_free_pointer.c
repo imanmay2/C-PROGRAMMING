@@ -1,19 +1,29 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void display(int *arr,int n){
-    for(int i=0;i<n;i++){
-        printf("%d ",*(arr+i));
+
+
+void display(int *arr,int row,int col){
+    for(int i=0;i<col;i++){
+        for(int j=0;j<row;j++){
+            printf("%d ",arr[i*row+j]);
+        }
+        printf("\n");
     }
 }
-int main(){
-    int *arr;
-    int n=5;
-    arr=(int *) malloc(n*sizeof(int));
 
-    for(int i=0;i<n;i++){
-        scanf("%d",(arr+i));
+
+int main(){
+    int row=2;
+    int col=3;
+    int *arr=(int *)malloc(row*col*sizeof(int));
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf("%d",&arr[i*col+j]);
+        }
     }
-    display(arr,n);
+
+    display(arr,row,col);
+
     free(arr);
 }
