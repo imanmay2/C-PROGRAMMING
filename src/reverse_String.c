@@ -1,51 +1,28 @@
-// #include<stdio.h>
-// void reverseString(char *str){
-//     // printf("%s",str);
-//     char *start=str;
-//     char *end=str;
-//     while(*end){
-//         end++;
-//     }
-//     end--;
-//     while(start<end){
-//         char temp=*start;
-//         *start=*end;
-//         *end=temp;
-//         start++;
-//         end--;
-//     }
-// }
-// int main(){
-//     char str[100];
-//     fgets(str,100,stdin);
-//     reverseString(str);
-//     printf("%s",str);
-// }
-
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 void reverseStr(char *str){
-    char *start=str;
-    char *end=str;
-    while(*end){
-        end++;
-    } end--;
-
+    int start=0;
+    int end=strlen(str)-1;
     while(start<end){
-        
-        char temp=*start;
-        *start=*end;
-        *end=temp;
+        char temp=str[start];
+        str[start]=str[end];
+        str[end]=temp;
 
         start++;
         end--;
     }
 }
 
-int main(){
-    char str[100];
-    fgets(str,100,stdin);
 
+int main(){
+    int n=100;
+    char *str=(char*) malloc(n*sizeof(str));  //char str[100];
+    printf("Enter the String: ");
+    scanf("%s",str);
+    printf("String you have entered : %s\n",str);
     reverseStr(str);
-    printf("%s",str);
+    printf("Reversed String is : %s\n",str);
+    free(str);
 }
