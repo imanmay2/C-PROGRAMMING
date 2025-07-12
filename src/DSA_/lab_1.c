@@ -66,38 +66,86 @@
 
 
 
-//Q4.Find the largest and smallest in an array.
-#include<stdio.h>
-int findLargest(int *arr,int n){
-    int max=arr[0];
-    for(int i=1;i<n;i++){
-        if(arr[i]>max){
-            max=arr[i];
-        }
-    }
-    return max;
-}
+// //Q4.Find the largest and smallest in an array.
+// #include<stdio.h>
+// int findLargest(int *arr,int n){
+//     int max=arr[0];
+//     for(int i=1;i<n;i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//     }
+//     return max;
+// }
 
-int findSmallest(int *arr,int n){
-    int min=arr[0];
-    for(int i=1;i<n;i++){
-        if(arr[i]<min){
-            min=arr[i];
-        }
-    }
-    return min;
-}
-int main(){
-    int n;
-    printf("Enter the range of the array : ");
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++){
-        printf("Enter the element : ");
-        scanf("%d",&arr[i]);
-    }
+// int findSmallest(int *arr,int n){
+//     int min=arr[0];
+//     for(int i=1;i<n;i++){
+//         if(arr[i]<min){
+//             min=arr[i];
+//         }
+//     }
+//     return min;
+// }
+// int main(){
+//     int n;
+//     printf("Enter the range of the array : ");
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         printf("Enter the element : ");
+//         scanf("%d",&arr[i]);
+//     }
     
-    printf("Smallest Number in the array is : %d\n",findSmallest(arr,n));
-    printf("Largest Number in the array is : %d",findLargest(arr,n));
+//     printf("Smallest Number in the array is : %d\n",findSmallest(arr,n));
+//     printf("Largest Number in the array is : %d",findLargest(arr,n));
 
+// }
+
+
+//Q5. Calculate sum and average in an array.
+
+//Q6. Count no. of even and odd from the array.
+
+//Q7. Reverse an array.
+// #include<stdio.h>
+// void reverseArr(int *arr,int n){
+//     int left=0;
+//     int right=n-1;
+//     while(left<right){
+//         int temp=arr[left];
+//         arr[left]=arr[right];
+//         arr[right]=temp;
+
+
+//         left++;
+//         right--;
+//     }
+// }
+
+// void printArr(int *arr,int n){
+//     for(int i=0;i<n;i++){
+//         printf("%d ",arr[i]);
+//     }
+//     printf("\n");
+// }
+// int main(){
+//     int n;
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         scanf("%d",&arr[i]);
+//     }
+//     printArr(arr,n);
+//     reverseArr(arr,n);
+//     printArr(arr,n);
+// }
+
+
+//Q8. Create 2 array and merge array.
+#include<stdio.h>
+int main(){
+    int n1;
+    int n2;
+    printf();
 }
