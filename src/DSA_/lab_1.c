@@ -11,19 +11,55 @@
 // }
 
 
-//Q2. Swapping 2 numbers using functions and pointers.
-#include<stdio.h>
-void swap(int *a,int *b){
-    *a=*a+(*b);
-    *b=*a-(*b);
-    *a=*a-(*b);
-}
 
-int main(){
-    int n1,n2;
-    printf("Enter the numbers : ");
-    scanf("%d %d",&n1,&n2);
-    printf("The numbers entered: %d %d",n1,n2);
-    swap(&n1,&n2);
-    printf("\nThe numbers entered: %d %d",n1,n2);
-}
+//Q2. Swapping 2 numbers using functions and pointers.
+// #include<stdio.h>
+// void swap(int *a,int *b){
+//     *a=*a+(*b);
+//     *b=*a-(*b);
+//     *a=*a-(*b);
+// }
+
+// int main(){
+//     int n1,n2;
+//     printf("Enter the numbers : ");
+//     scanf("%d %d",&n1,&n2);
+//     printf("The numbers entered: %d %d",n1,n2);
+//     swap(&n1,&n2);
+//     printf("\nThe numbers entered: %d %d",n1,n2);
+// }
+
+
+
+//Q3. Create an array, take input from the element and check whether element present or not using pointers.
+// #include<stdio.h>
+// int findElement(int *,int,int);
+// void main(){
+//     int n;
+//     printf("Enter the range of the array : ");
+//     scanf("%d",&n);
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         printf("Enter the element : ");
+//         scanf("%d",&arr[i]);
+//     }
+//     int ele;
+//     printf("Enter the element you want to find : ");
+//     scanf("%d",&ele);
+
+//     int idx=findElement(arr,n,ele);
+//     if(idx==-1){
+//         printf("No such element exists in the array !! ");
+//         return;
+//     }
+//     printf("Element found at index : %d",idx);
+// }
+
+// int findElement(int *arr,int n,int ele){
+//     for(int i=0;i<n;i++){
+//         if(ele==arr[i]){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
