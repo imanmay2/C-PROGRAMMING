@@ -1,7 +1,5 @@
 #include<stdio.h>
-
-int ct=-1;
-
+int ct=-1; //global variable
 
 int isEmpty(char arr[],int n){
     if(ct==-1){
@@ -54,30 +52,24 @@ int main(){
     char arr[n];
 
     while(1){
-        printf("1. Push Character into Stack.\n");
+    printf("1. Push Character into Stack.\n");
     printf("2. Pop Character from Stack.\n");
     printf("3. Display Stack.\n");
     printf("4. Exit.\n");
     printf("Enter your choice: \n");
     int ch;
     scanf("%d",&ch);
-
     if(ch==1){
         // push operation
         push(arr,n);
-
-        
     } else if(ch==2){
         // pop operation
         pop(arr,n);
-
     } else if(ch==3){
         display(arr,n);
-
     } else if(ch==4){
         printf("Program Terminated.");
         break;
-
     } else{
         printf("Invalid Choice entered.\n");
     }
