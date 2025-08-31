@@ -5,7 +5,6 @@ int isEmpty(int stack[]){
     if(ct==-1){
         return 1;
     } return 0;
-
 }
 
 void push(int stack[],int ele){
@@ -71,7 +70,7 @@ int main(){
             } else if(str[i]=='*'){
                 push(stack,(b*a));
             }
-        } 
+        }
     }
     printf("Evaluation of the postfix expression is: %d",pop(stack));
 }
