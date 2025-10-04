@@ -77,17 +77,99 @@ void delete_Nth_Node(struct Node** head,int idx){
     temp->next=temp->next->next;
 }
 
+void reverse_LL(struct Node** head){
+    struct Node* prev=NULL;
+    struct Node* next;
+    struct Node* curr=*head;
+    while(curr!=NULL){
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+    *head=prev;
+}
+
+
+struct Node* midNode(struct Node** head){
+    struct Node* slow=*head;
+    struct Node* fast=*head;
+
+    while(fast!=NULL && fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+
+    return slow;   //midNode
+}
+
+
+int checkPalindrome(struct Node** head){
+
+    // midNode.
+    // reverse the right half of the linkedlist.
+    // match the left LL with the right LL.
+    if(*head==NULL || (*head)->next==NULL){
+        return 1;
+    }
+
+    struct Node* mid_Node=midNode(head);
+
+    //reversing the right half of the linkedList.
+    struct Node* curr=mid_Node;
+    struct Node* prev=NULL;
+    struct Node* next;
+    while(curr!=NULL){
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+
+    struct Node* right=prev;
+    struct Node* left=*head;
+
+
+
+    //step:3 check for the left and right linkedList.
+    while(right!=NULL){
+        if(left->data!=right->data){
+            return 0;
+        }
+        left=left->next;
+        right=right->next;
+    }
+    
+    return 1;
+}
+
+
+
+
 
 int main(){
     struct Node* head=NULL;
     addLast(&head,1);
     addLast(&head,2);
-    addLast(&head,3);
-    addLast(&head,4);
-    addLast(&head,5);
+    addLast(&head,2);
+    addLast(&head,2);
+    addLast(&head,1);
     display_LL(&head);
     delete_Nth_Node(&head,2);
     display_LL(&head);
     add_Nth_Node(&head,2,3);
     display_LL(&head);
+
+
+    printf("Reversed Linked List is : \n");
+    reverse_LL(&head);
+    display_LL(&head);
+
+    int checkPallin=checkPalindrome(&head);
+    if(checkPallin){
+        printf("LinkedList is Pallindrome.\n");
+    } else{
+        printf("LinkedList is not Pallindrome.\n");
+    }
 }
+
