@@ -50,11 +50,32 @@ void addLast(struct Node** head,int value){
     while(temp->next!=NULL){
         temp=temp->next;
     }
-
     temp->next=newNode;
 }
 
+void add_Nth_Node(struct Node** head,int idx,int value){
+    struct Node* newNode=createNode(value);
 
+    struct Node* temp=*head;
+    int i=0;
+    while(i<idx-1){
+        temp=temp->next;
+        i++;
+    }
+
+    newNode->next=temp->next;
+    temp->next=newNode;
+}
+
+void delete_Nth_Node(struct Node** head,int idx){
+    int i=0;
+    struct Node* temp=*head;
+    while(i<idx-1){
+        temp=temp->next;
+        i++;
+    }
+    temp->next=temp->next->next;
+}
 
 
 int main(){
@@ -63,5 +84,10 @@ int main(){
     addLast(&head,2);
     addLast(&head,3);
     addLast(&head,4);
+    addLast(&head,5);
+    display_LL(&head);
+    delete_Nth_Node(&head,2);
+    display_LL(&head);
+    add_Nth_Node(&head,2,3);
     display_LL(&head);
 }
