@@ -79,11 +79,26 @@ void addPoly(struct Node *poly1, struct Node *poly2, struct Node **poly)
     }
 }
 
+
+void multiply(struct Node* poly1,struct Node* poly2,struct Node** poly){
+    struct Node* p1=poly1;
+
+    while(p1!=NULL){
+        struct Node* p2=poly2;
+        while(p2!=NULL){
+            addLast(poly,p1->coeff * p2->coeff,p1->pow+p2->pow);
+            p2=p2->next;
+        }
+        p1=p1->next;
+    }
+}
+
 int main()
 {
     struct Node *poly = NULL;
     struct Node *poly1 = NULL;
     struct Node *poly2 = NULL;
+    struct Node* polyM=NULL;
 
     addLast(&poly1, -9, 5);
     addLast(&poly1, 7, 3);
@@ -105,4 +120,8 @@ int main()
 
     printf("The addition of the polynomials are :\n");
     display_poly(&poly);
+
+    multiply(poly1,poly2,&polyM);
+    printf("The Multiplication of the polynomials are :\n");
+    display_poly(&polyM);
 }
