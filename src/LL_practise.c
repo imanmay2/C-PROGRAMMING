@@ -206,6 +206,12 @@ int detectCycle(struct Node** head){
     } return 0;
 }
 
+//zig-zag
+
+
+
+
+
 
 
 
@@ -236,9 +242,6 @@ int main(){
     head->next->next = createNode(3);
     head->next->next->next = createNode(4);
     head->next->next->next->next = createNode(5);
-
-    // Uncomment this line to create a cycle for testing
-    // head->next->next->next->next->next = head->next;
 
 
     if(detectCycle(&head)){
