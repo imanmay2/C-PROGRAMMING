@@ -119,21 +119,131 @@ void removeIndex(struct Node** head,int idx){
 }
 
 
+void reverse(struct Node** head){
+    //reverse the linkedList.
+
+    struct Node* curr=*head;
+    struct Node* prev=NULL;
+    struct Node* next;
+
+    while(curr!=NULL){
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+    *head=prev;
+}
+
+
+struct Node* findMidNode(struct Node** head){
+    struct Node* slow=*head;
+    struct Node* fast=*head;
+
+    while(fast!=NULL && fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    return slow; //midNode
+}
+
+
+void checkPalindrome(struct Node** head){
+    if(*head==NULL || (*head)->next==NULL){
+        printf("List is palindrome.\n");
+        return;
+    }
+
+
+    struct Node* curr=findMidNode(head);
+
+    struct Node* prev=NULL;
+    struct Node* next;
+
+    while(curr!=NULL){
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+    }
+    struct Node* right=prev;
+    struct Node* left=*head;
+
+
+    //step .3 
+
+    int flag=1;
+    while(right!=NULL){
+        if(left->data!=right->data){
+            flag=0;
+            printf("Linked List is not Pallindrome.\n");
+            break;
+        }
+
+        left=left->next;
+        right=right->next;
+    }
+    if(flag==1){
+        printf("Linked List is Pallindrome.");
+    }
+}
+
+int detectCycle(struct Node** head){
+    if(*head==NULL || (*head)->next==NULL){
+        return 0;
+    }
+
+    struct Node* slow=*head;
+    struct Node* fast=*head;
+
+    while(fast!=NULL && fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;
+
+        if(slow==fast){
+            return 1;
+        }
+    } return 0;
+}
+
+
+
+
 int main(){
-    struct Node* head=NULL;
-    addFirst(&head,1);
-    addFirst(&head,2);
-    addLast(&head,3);
-    addLast(&head,4);
+    // struct Node* head=NULL;
+    // addLast(&head,1);
+    // addLast(&head,2);
+    // addLast(&head,2);
+    // addLast(&head,1);
+    // addFirst(&head,2);
 
-    display(&head);
+    // display(&head);
 
-    removeFirst(&head);
-    display(&head);
+    // reverse(&head);
+    // display(&head);
+    // removeFirst(&head);
+    // display(&head);
 
-    removeLast(&head);
-    display(&head);
+    // removeLast(&head);
+    // display(&head);
 
-    removeIndex(&head,2);
-    display(&head);
+    // removeIndex(&head,2);
+    // display(&head);
+
+    // checkPalindrome(&head);
+    struct Node* head = createNode(1);
+    head->next = createNode(2);
+    head->next->next = createNode(3);
+    head->next->next->next = createNode(4);
+    head->next->next->next->next = createNode(5);
+
+    // Uncomment this line to create a cycle for testing
+    // head->next->next->next->next->next = head->next;
+
+
+    if(detectCycle(&head)){
+        printf("The LinkedList is a cycle.\n");
+    } else{
+        printf("The LinkedList is not in a cycle.");
+    }
 }
