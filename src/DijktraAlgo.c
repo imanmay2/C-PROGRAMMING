@@ -29,7 +29,7 @@ void dijktra(int n,int graph[n][n],int src){
 
 
     for(int count=0;count<n-1;count++){
-        int u=minDist(dist,vis,n);
+        int u=minDist(n,dist,vis);
         vis[u]=1;
 
         for(int v=0;v<n;v++){
