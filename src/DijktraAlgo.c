@@ -40,7 +40,7 @@ void dijktra(int n,int graph[n][n],int src){
     }
 
     //print
-    printf("Vertext distance from source");
+    printf("Vertex distance from source");
     for(int i=0;i<n;i++){
         printf("%d\t\t%d",i,dist[i]);
     }
